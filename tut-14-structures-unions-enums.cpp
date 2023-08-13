@@ -23,33 +23,41 @@ using namespace std;
         char letter;
         float gold;
     };
-    
 
-int main () {
-    struct Employee harry;
-    harry.eId = 1;
-    harry.favChar = 'A';
-    harry.salary = 250;
+    // enum
+    enum Meal
+    {
+        breakfast,
+        lunch,
+        dinner
+    };
 
-    cout <<"The value is "<< harry.salary << endl;
-    cout <<"The value is "<< harry.favChar << endl;
-    cout <<"The value is "<< harry.eId << endl;
+    int main()
+    {
+        struct Employee harry;
+        harry.eId = 1;
+        harry.favChar = 'A';
+        harry.salary = 250;
 
-    // for using typedef we don't need to write "struct Student Mizan", instead we can access the Student strcut by calling stdnt.
-    stdnt mizan;
-    mizan.id = 223311206;
-    mizan.favChar = 'M';
-    mizan.tutionFee = 20000;
+        cout << "The value is " << harry.salary << endl;
+        cout << "The value is " << harry.favChar << endl;
+        cout << "The value is " << harry.eId << endl;
 
-    union Money Rakib;
-    Rakib.gold = 25.02;
-    Rakib.letter = 'R';
-    Rakib.rice = 545;
+        // for using typedef we don't need to write "struct Student Mizan", instead we can access the Student strcut by calling stdnt.
+        stdnt mizan;
+        mizan.id = 223311206;
+        mizan.favChar = 'M';
+        mizan.tutionFee = 20000;
 
-// We can't access all values of a union type data at the same time.
-    cout << Rakib.gold << endl
-         << Rakib.letter << endl
-         << Rakib.rice;
+        union Money Rakib;
+        Rakib.gold = 25.02;
+        Rakib.letter = 'R';
+        Rakib.rice = 545;
 
-    return 0;
+        // We can't access all values of a union type data at the same time.
+        cout << Rakib.gold << endl
+             << Rakib.letter << endl
+             << Rakib.rice;
+
+        return 0;
 }
