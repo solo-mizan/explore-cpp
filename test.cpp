@@ -1,27 +1,33 @@
 #include <iostream>
+using namespace std;
 
-// Define a structure to hold the swapped values
-struct SwappedValues {
-    int first;
-    int second;
+struct StructResult {
+    int greater;
+    int smaller;
 };
 
-// Function to swap two values and return them using a structure
-SwappedValues swapAndReturn(int a, int b) {
-    SwappedValues result;
-    result.first = b;
-    result.second = a;
+StructResult findGreaterSmaller(int x, int y){
+    StructResult result;
+    if(x > y){
+        result.greater = x;
+        result.smaller = y;
+    }
+    else {
+    result.greater = y;
+    result.smaller = x;
+    }
+
     return result;
 }
 
-int main() {
-    int x = 5;
-    int y = 10;
+int main () {
+    int a, b;
+    cout << "Enter two integer: " << endl;
+    cin >> a >> b;
+    StructResult findResult = findGreaterSmaller(a, b);
 
-    SwappedValues swapped = swapAndReturn(x, y);
-
-    std::cout << "Original values: x = " << x << ", y = " << y << std::endl;
-    std::cout << "Swapped values: x = " << swapped.first << ", y = " << swapped.second << std::endl;
+    cout << "The greater number is " << findResult.greater << endl;
+    cout << "The smaller number is " << findResult.smaller << endl;
 
     return 0;
 }

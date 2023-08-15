@@ -1,2 +1,3 @@
 
-multiple line 
+    return 0;
+}
