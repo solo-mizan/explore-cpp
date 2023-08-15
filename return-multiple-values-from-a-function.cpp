@@ -15,6 +15,19 @@ void findGreaterSmaller(int a, int b, int arr[]){
     }
 }
 
+// return multiple values using structure
+struct StructResult {
+    int firstValue;
+    int secondValue;
+};
+
+StructResult swapValues(int x, int y){
+    StructResult result;
+    result.firstValue = y;
+    result.secondValue = x;
+    return result;
+}
+
 int main () {
     int x = 20, y = 10;
     int array[2];
@@ -23,6 +36,10 @@ int main () {
     // retrieve the greater and smaller number from array
     cout << "The greater number is " << array[0] << endl;
     cout << "The smaller number is " << array[1] << endl;
+
+    StructResult swapped = swapValues(x, y);
+    cout << "The swapped value of x is " << swapped.firstValue << endl;
+    cout << "The swapped value of y is " << swapped.secondValue << endl;
 
     return 0;
 }
