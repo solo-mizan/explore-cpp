@@ -13,6 +13,11 @@ inline int product(int x, int y){
     return (x * y) + c;
 }
 
+// default argument of a function
+float moneyCalc(int amount, float interest = 0.10){
+    return amount + (amount * interest);
+}
+
 int main () {
     int a, b;
     cout << "Enter the value of a and b" << endl;
@@ -21,13 +26,7 @@ int main () {
     cout << "The product of a and b is " << product(a, b)<< endl;
     cout << "The product of a and b is " << product(a, b)<< endl;
     cout << "The product of a and b is " << product(a, b)<< endl;
-    cout << "The product of a and b is " << product(a, b)<< endl;
-    cout << "The product of a and b is " << product(a, b)<< endl;
-    cout << "The product of a and b is " << product(a, b)<< endl;
-    cout << "The product of a and b is " << product(a, b)<< endl;
-    cout << "The product of a and b is " << product(a, b)<< endl;
-    cout << "The product of a and b is " << product(a, b)<< endl;
-    cout << "The product of a and b is " << product(a, b)<< endl;
 
+    cout << moneyCalc(1000);
     return 0;
 }
