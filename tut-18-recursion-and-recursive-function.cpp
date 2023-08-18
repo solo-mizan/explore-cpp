@@ -11,12 +11,10 @@ int factorial(int n){
 
 // fibonacci series using recursion function
 int fibonacci(int n){
-    if (n == 0){
-        return 0;
-    }
-    else if(n == 1){
+    if (n < 2){
         return 1;
     }
+    
     return fibonacci(n-2) + fibonacci(n -1);
 }
 
@@ -25,6 +23,7 @@ int main () {
     int a;
     cout << "Enter a positive integer" << endl;
     cin >> a;
+    cout << "Fibonacci = " << fibonacci(a);
 
     return 0;
 }
