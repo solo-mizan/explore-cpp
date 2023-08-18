@@ -13,6 +13,21 @@ double sum(int x, int y, int z){
     return x + y + z;
 }
 
+// overloading function of calculating volume of a cube
+int volume(int h){
+    return (h * h * h);
+}
+
+// overloading function of calculating volume of a cylinder
+int volume(int h, int w, int r){
+    return (h * w * r);
+}
+
+// overloading function of calculating volume of a rectangle
+int volume(int h, int w){
+    return (h * w);
+}
+
 int main () {
 
     int a, b, c;
