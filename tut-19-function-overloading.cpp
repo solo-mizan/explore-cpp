@@ -1,7 +1,10 @@
 #include <iostream>
 using namespace std;
 
-// function overloading
+/*
+function overloading -->
+Function overloading is a feature of object-oriented programming where two or more functions can have the same name but different parameters. When a function name is overloaded with different jobs it is called Function Overloading.
+*/
 int sum(int a, int b){
     return a + b;
 }
