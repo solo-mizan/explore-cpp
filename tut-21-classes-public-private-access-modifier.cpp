@@ -3,10 +3,13 @@ using namespace std;
 
 // create a student class
 class Student{
+
+    // data hiding
 private:
     string gfName;
     float cgpa;
 
+    // public data
 public:
     string name;
     int id;
