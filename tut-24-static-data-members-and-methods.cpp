@@ -17,6 +17,10 @@ class Employee{
     void getData(){
         cout << "The id of this employee is " << id << " and this is employee number " << count << endl;
     }
+
+    static void getCount(){
+        cout << "The value of count is " << count << endl;
+    }
 };
 
 int Employee::count; // default value is 0
@@ -27,12 +31,15 @@ int main () {
 
     mizan.setData();
     mizan.getData();
+    Employee::getCount();
 
     faisal.setData();
     faisal.getData();
+    Employee::getCount();
 
     jibon.setData();
     jibon.getData();
+    Employee::getCount();
 
     return 0;
 }
